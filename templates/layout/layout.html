@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+    {% end %}
+    <link href="{{ static_url("css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ static_url("css/common/style.css") }}" rel="stylesheet">
+    <link href="{{ static_url("css/layout/layout.css") }}" rel="stylesheet">
+    <link href="{{ static_url("css/common/alert.css") }}" rel="stylesheet">
+    {% block css %}
+    {% end %}
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="md-modal md-effect-1" id="global-inform">
+        <div class="md-content">
+            <h3 class="md-header"></h3>
+            <div class="md-body">
+                <div class="md-loading">
+                    <div class="md-loading-icon"></div>
+                    <div class="md-loading-text"></div>
+                </div>
+                <div class="md-panel"></div>
+            </div>
+            <div class="md-footer">
+                <button class="btn btn-primary close-inform">关闭</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+    {% block inform %}
+    {% end %}
+    {% include header.html %}
+    {% block nav %}
+    {% end %}
+    {% block banner %}
+    {% end %}
+    {% block main %}
+    {% end %}
+    {% include footer.html %}
+    <script src="{{ static_url('js/jquery.min.js') }}"></script>
+    <script src="{{ static_url('js/bootstrap.min.js') }}"></script>
+    <script src="{{ static_url('js/register/logout.js') }}"></script>
+    <script src="{{ static_url('js/common/inform.js') }}"></script>
+    {% block javascript %}
+    {% end %}
+    <div style="display: none">
+        <script src="https://s4.cnzz.com/z_stat.php?id=1256696230&web_id=1256696230"
+                language="JavaScript" async="async">
+        </script>
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?04d7fb333c87a6a46018ce77a373259e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+    </div>
+</body>
+</html>
