@@ -24,6 +24,7 @@ urls = [
             (r"/test", TestHandler),
             (r"/poem", PoemPageHandler),
             (r"/list", PoemListHandler),
+            (r"/picture/", PoemListHandler),
         ]
 
 
