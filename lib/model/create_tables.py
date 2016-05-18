@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from model.base import metadata, db
-from model.amazon_errcode import Amazon_errcode
+from lib.model.base import metadata, db
+from scrapy.wikisql import Wiki_first
 
 
 class CreateTables(object):

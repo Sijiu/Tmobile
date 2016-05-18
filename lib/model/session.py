@@ -3,7 +3,7 @@
 
 import contextlib
 from sqlalchemy.orm import sessionmaker
-from model.base import db
+from lib.model.base import db
 
 
 session_maker = sessionmaker(bind=db)
