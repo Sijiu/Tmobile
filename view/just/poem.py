@@ -2,7 +2,7 @@
 
 import tornado.web
 
-from lib.mongotest import Feed
+from lib.nosql.mongotest import Feed
 
 
 class PoemPageHandler(tornado.web.RequestHandler):

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Tmobile.iml" filepath="$PROJECT_DIR$/.idea/Tmobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Tplain/.idea/Tmobile.iml" filepath="$PROJECT_DIR$/../Tplain/.idea/Tmobile.iml" />
     </modules>
   </component>
 </project>

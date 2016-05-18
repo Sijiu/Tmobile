@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+MONGO_HOST = '127.0.0.1'
+MONGO_PORT = 37017
+MONGO_USER = "root"
+MONGO_PASSWORD = "123456"
+MAX_POOL_SIZE = 20
