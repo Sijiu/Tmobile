@@ -1,7 +1,8 @@
 # --coding:utf-8
 
 from urllib2 import urlopen
-from bs4 import  BeautifulSoup
+from bs4 import BeautifulSoup
+from wikisql import Wiki_first
 import re
 
 pages = set()
