@@ -25,10 +25,21 @@ def selection_seq(num):
     return num
 
 
-def insertion_sort(num):
+def insertion_sort_bs(num):
     if len(num) > 1:
         for i in range(1, len(num)):
             while i > 0 and num[i] > num[i-1]:
+                tmp = num[i]
+                num[i] = num[i-1]
+                num[i-1] = tmp
+                i -= 1
+        return num
+
+
+def insertion_sort(num):
+    if len(num) > 1:
+        for i in range(1, len(num)):
+            while i > 0 and num[i] < num[i-1]:
                 tmp = num[i]
                 num[i] = num[i-1]
                 num[i-1] = tmp
