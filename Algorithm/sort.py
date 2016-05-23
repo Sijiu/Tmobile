@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime
+import time
 
 
 def bubble_sort(num):
@@ -37,13 +37,14 @@ def insertion_sort(num):
 
 
 if __name__ == "__main__":
-    seq = [22, 1, 33, 4, 7, 6, 8, 9, 11, 56, 45, 23, 234, 24, 65, 78, 76, 809, 345, 34, 341, 567, 4567, 45674, 47, 789, 879, 109]
-    print "--------bubble_sort-------------"
-    bubble_time = datetime.now()
-    print bubble_sort(seq), "\ntime = ", bubble_time - datetime.now()
+    seq = [22, 1, 33, 4, 7, 6, 8, 9, 11, 22, 56, 45, 23, 234, 24, 65, 78, 76, 809, 345, 34, 341, 567, 4567, 45674,
+           47, 789, 879, 109, 78789, 787, 54,  4578,  4854, 5453, 879, 321, 62, 963, 248, 871, 365, 842, 347]
+    print "-----------bubble_sort--------------"
+    bubble_time = time.clock()
+    print bubble_sort(seq), "\ntime = ", bubble_time - time.clock()
     print "--------selection_sort-------------"
-    selection_time = datetime.now()
-    print selection_seq(seq), "\ntime = ", selection_time - datetime.now()
+    selection_time = time.clock()
+    print selection_seq(seq), "\ntime = ", selection_time - time.clock()
     print "--------insertion_sort-------------"
-    insertion_time = datetime.now()
-    print insertion_sort(seq), "\ntime = ", insertion_time - datetime.now()
+    insertion_time = time.clock()
+    print insertion_sort(seq), "\ntime = ", insertion_time - time.clock()
