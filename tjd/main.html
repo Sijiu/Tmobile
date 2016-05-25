@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="ActNeed,跨境电商,采集,商品采集,采集助手">
+    <title>ActNeed采集助手</title>
+    <link href="static/css/style.css" rel="stylesheet"/>
+    <link href="static/css/main.css" rel="stylesheet"/>
+    <script src="static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="static/js/underscore.min.js" type="text/javascript"></script>
+    <script src="static/js/crawl.js" type="text/javascript"></script>
+    <script src="static/js/status.js" type="text/javascript"></script>
+    <script src="static/js/exception.js" type="text/javascript"></script>
+    <script src="static/js/main.js" type="text/javascript"></script>
+</head>
+<body class="wrap">
+    <div id="cover">
+        <div class="ac-title">ActNeed</div>
+        <div class="ac-2-title">一键采集，方便的选择</div>
+        <div class="cover-center" id="loading">
+            <div class="icon"></div>
+            <div class="text">正在加载用户状态 . . .</div>
+        </div>
+        <div class="cover-center" id="login" style="display: none">
+            <div class="text">未登录，请前往ActNeed官网登录</div>
+            <div class="text">
+                <a class="btn blue" href="https://www.actneed.com/" target="_blank">
+                    现在去ActNeed官网登录
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="version">
+        <div class="version-text">
+            ActNeed采集插件最新版本<span class="v" id="latest-version"></span>已发布，请及时更新
+            <a class="btn small light" href="https://www.actneed.com/plugin.html" target="_blank">前往下载</a>
+            <a class="close-x" href="#">×</a>
+        </div>
+    </div>
+    <div id="inform"></div>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span style="color: #399">Act</span>Need
+            </div>
+            <div class="logo-text">一键采集，方便的选择<span class="v">V1.1</span></div>
+            <div class="top-info">
+                <ul class="info-tag">
+                    <li><a href="#">如何使用</a></li>
+                    <li><a href="#">设置选项</a></li>
+                    <li><a href="https://www.actneed.com/" target="_blank">前往ActNeed官网</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="top-status">
+            <h2>用户<span class="personal"></span>的采集</h2>
+            <span class="collect-div">
+                <a href="https://www.actneed.com/warehouse/feed" class="btn blue" target="_blank">
+                    查看采集列表
+                </a>
+            </span>
+        </div>
+        <div class="crawl-div">
+            <div class="crawl-content">
+                <textarea id="start-url" placeholder=""></textarea>
+            </div>
+            <div class="status-label">请输入采集链接开始采集</div>
+            <div style="text-align: right">
+                <a href="#" class="crawl-btn btn green" id="crawl-btn">开始采集</a>
+                <a href="#" class="crawl-btn btn red" id="terminal">终止当前任务</a>
+            </div>
+        </div>
+        <ul class="attention">
+            <li>使用前必须保证已在Chrome浏览器上登录ActNeed账户</li>
+            <li>商品采集的结果会保存在当前浏览器登录的ActNeed账户的商品列表中，避免频繁更换用户造成混乱</li>
+            <li>采集过程中若关闭当前页面，采集立即停止；刷新或重新打开页面，采集会继续开始</li>
+        </ul>
+        <table class="count-status">
+            <tr>
+                <td>
+                    采集成功<br>
+                    <span class="stat success" id="success-stat">0</span>
+                </td>
+                <td>
+                    采集失败<br>
+                    <span class="stat error" id="error-stat">0</span>
+                </td>
+                <td>
+                    采集总数<br>
+                    <span class="stat total" id="total-stat">0</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <span class="tip">
+                        【温馨提示】如果您有很大的采集需求量，请直接联系QQ 851831629
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <div class="cross-line"></div>
+        <div class="ac-label">ActNeed 店铺管家</div>
+        <ul class="qq-group">
+            <li>官方AliExpress群：344643707</li>
+            <li>官方eBay群：344964124</li>
+            <li>官方Amazon群：434790231</li>
+            <li>官方Wish群：484351817</li>
+            <li>官方Lazada群：534828718</li>
+        </ul>
+    </div>
+</body>
+</html>
