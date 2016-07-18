@@ -2,6 +2,7 @@
 
 from lib.model.base import metadata, db
 from scrapy.wikisql import Wiki_first
+from scrapy.lagousql import LagouFirst
 
 
 class CreateTables(object):
