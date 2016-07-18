@@ -36,12 +36,14 @@ JOOM_YAML = "/Users/xuhe/Project/Actneed/joom.yaml"
 ECHO_SQL = False
 
 DB = {
-    # "user": "root",
-    # "password": "1111",
-    "user": "",
-    "password": "",
-    "host": "45.78.57.254",
-    "db_name": "poem",
+    "user": "root",
+    "password": "1111",
+    # "user": "",
+    # "password": "",
+    # "host": "45.78.57.254",
+    # "db_name": "poem",st
+    "host": "127.0.0.1",
+    "db_name": "test"
 }
 
 #redis configure
