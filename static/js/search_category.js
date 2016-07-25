@@ -212,14 +212,14 @@
                 $("#cate-search-result").show();
                 CategoryObj.clear_cate_displayer();
                 category_div.find(".cate-list-select").hide();
-                //$.ajax({
-                //    "url": options.select_cate_url,
-                //    "type": options.type,
-                //    "dataType": "json",
-                //    "data": data,
-                //    "success": function(data){
-                //    }
-                //})
+                $.ajax({
+                    "url": options.select_cate_url,
+                    "type": options.type,
+                    "dataType": "json",
+                    "data": data,
+                    "success": function(data){
+                    }
+                })
             },
             init_search_panel: function(){
                 CategoryObj.clear_cate_displayer();
