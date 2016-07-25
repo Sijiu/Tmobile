@@ -1,0 +1,53 @@
+body{
+    font-family: "Microsoft YaHei", "lucida console", sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    background: url(../images/bg.png) repeat 0 0;
+}
+h1{
+    font-size: 40px;
+    line-height: 100px;
+    margin: 0;
+}
+h2{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 50px;
+    margin: 0;
+}
+h4{
+    font-size: 14px;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+.btn{
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #fff;
+}
+.btn.blue{
+    background: #0084ff;
+}
+.btn.red{
+    background: #eb3c00;
+}
+.btn.green{
+    background: #339999;
+}
+.btn.orange{
+    background: #f0ad4e;
+}
+.btn.light{
+    background: #fcf4d3;
+    border: 1px solid #a1966a;
+    color: #333;
+}
+.btn.small{
+    padding: 6px 20px;
+}

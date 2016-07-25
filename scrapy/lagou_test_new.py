@@ -21,6 +21,7 @@ class Lagou(object):
         url_count = json_info["content"]["positionResult"]["totalCount"]
         page = int(math.ceil(url_count/15.0))
         print "\n 共有%s条，%s页" % (url_count, page)
+        page = 2
         company_links = []
         try:
             for i in range(page):
@@ -28,10 +29,11 @@ class Lagou(object):
                     types = 'true'
                 else:
                     types = 'false'
-                self.get_json_info(i, types, keyword_index)
+                json_info = self.get_json_info(i, types, keyword_index)
                 result = json_info["content"]["positionResult"]["result"]
                 print "*************第%s页--------" % (i+1)
-                company_links += self.get_company_links(result)
+                company_link = self.get_company_links(result)
+                company_links.extend(company_link)
             return company_links
         except AttributeError:
             flag = "wrong"
@@ -45,7 +47,7 @@ class Lagou(object):
         html = urlopen(url)
         print url
         bs_obj = BeautifulSoup(html)
-        print "第---", bs_obj
+        # print "第---", bs_obj
         p = bs_obj.p.get_text()
         json_info = json.loads(p)
         print "json===", json_info
@@ -55,18 +57,22 @@ class Lagou(object):
         company_links = []
         link_front = "http://www.lagou.com/jobs/"
         link_behind = ".html"
+        # text_file = open("company.txt", "a")
         for i in range(len(company_list)):
-            # print "%s----%s" % (i, company_list[i])
-            company_id = company_list[i]["companyId"]
+            # company_id = company_list[i]["companyId"]
+            company_id = company_list[i]["positionId"]
             # print "%s--id--%s" % (i, company_id)
+            # text_file.write(link_front + str(company_id) + link_behind)
+            # text_file.write("\n")
             company_links.append(link_front + str(company_id) + link_behind)
         # print "---", company_links
+        # text_file.close()
         return company_links
 
     def get_company_info(self, url):
         html = urlopen(url)
+        print url
         try:
-            print url
             bs_obj = BeautifulSoup(html)
             h1 = bs_obj.find(id="container").h1
             company = h1.find("div").get_text()
@@ -104,5 +110,8 @@ if __name__ == "__main__":
     keyword = "python"
     # lagou.get_company_info("http://www.lagou.com/jobs/1966817.html")
     company_links = lagou.lagou_spider_keyword(keyword)
-    for link in company_links:
-        lagou.get_company_info(link)
+
+    for link in range(len(company_links)):
+        if link > 8:
+            lagou.get_company_info(company_links[link])
+        # print link, "\n"
