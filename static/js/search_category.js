@@ -280,14 +280,14 @@
             category_div.find(".cancel-cate-search").click(CategoryObj.init_search_panel);
             CategoryObj.init();
         });
-        //var returnObj = {
-        //    get_category_name: function(){
-        //        return category_group;
-        //    },
-        //    get_category_id: function(){
-        //        return category_group;
-        //    }
-        //};
-        //return returnObj;
+        var returnObj = {
+            get_category_name: function(){
+                return category_group;
+            },
+            get_category_id: function(){
+                return category_group;
+            }
+        };
+        return returnObj;
     }
 })(jQuery);
