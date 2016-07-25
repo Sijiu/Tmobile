@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Poem Maker Pro</title>
+    <link href="{{ static_url("css/search_category.css") }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Enter terms below.</h1>
+        <form method="post" action="/poem">
+            <p>Plural noun<br><input type="text" name="noun1"></p>
+            <p>Singular noun<br><input type="text" name="noun2"></p>
+            <p>Verb (past tense)<br><input type="text" name="verb"></p>
+            <p>Noun<br><input type="text" name="noun3"></p>
+            <input type="submit">
+        </form>
+        first-category:<div id="first-category" class="category" style="height:500px;width:600px;"></div>
+        first-category:<div id="second-category" class="category"  style="height:500px;width:600px;"></div>
+    </body>
+<script src="{{ static_url("js/jquery.min.js") }}"></script>
+<script src="{{ static_url("js/search_category.js") }}"></script>
+<script src="{{ static_url("js/index/index.js") }}"></script>
+</html>

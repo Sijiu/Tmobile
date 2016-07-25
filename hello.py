@@ -35,8 +35,6 @@ if __name__ == "__main__":
         handlers=urls,
         debug=True,
         **SETTINGS
-        # template_path=os.path.join(os.path.dirname(__file__), "templates"),
-        # static_path=os.path.join(os.path.dirname(__file__), "static")
     )
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(options.port)
