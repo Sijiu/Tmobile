@@ -125,8 +125,8 @@
                             category_div.find("li a").click(CategoryObj.choose_category);
                             CategoryObj.search_key_up();
                         }else{
-                            //Inform.disable();
-                            //Inform.show(data.message);
+                            Inform.disable();
+                            Inform.show(data.message);
                         }
                     },
                     "error": function(){
