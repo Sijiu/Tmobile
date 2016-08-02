@@ -21,10 +21,10 @@ class Lagou(object):
         url_count = json_info["content"]["positionResult"]["totalCount"]
         page = int(math.ceil(url_count/15.0))
         print "\n 共有%s条，%s页" % (url_count, page)
-        page = 2
+        page = 16
         company_links = []
         try:
-            for i in range(page):
+            for i in range(10, page):
                 if i == 0:
                     types = 'true'
                 else:
@@ -107,11 +107,12 @@ class Lagou(object):
 if __name__ == "__main__":
     lagou = Lagou()
     # lagou.lagou_spider_keyword(u"兰州")
-    keyword = "python"
+    # keyword = "python"
+    keyword = u'数据挖掘'
+
     # lagou.get_company_info("http://www.lagou.com/jobs/1966817.html")
     company_links = lagou.lagou_spider_keyword(keyword)
 
     for link in range(len(company_links)):
-        if link > 8:
-            lagou.get_company_info(company_links[link])
+        lagou.get_company_info(company_links[link])
         # print link, "\n"
