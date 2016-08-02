@@ -1,0 +1,14 @@
+1、在插件生成的div的id上绑定searchCategory()方法
+    例:$("#category-search").searchCategory();
+2、searchCategory()方法中传入参数：
+    options = {
+        category_div : "#category-search", // 绑定事件的id名称，带#
+        max_layers : 4,   // 目录的最大层数，默认为7层
+        select_cate_url : '',  // 请求下级目录的url请求地址,默认为''
+        select_type: "POST",   // 请求下级目录的方式，默认"POST"
+        search_cate_url : '',  // 全局目录搜索的url请求地址,默认为''
+        search_type: "POST",   // 全局目录搜索请求方式，默认"POST"
+        data: {"parent_id": 0} // 请求参数,"parent_id"为请求下级目录必需参数,表示请求该id的下级目录,初始化一级目录的"parent_id"默认为0
+                                   其他需要的参数均放在data中，例需要"shop_id"参数：data：{"parent_id": 0, "shop_id": shop_id}
+    };
+3、请求下级目录返回参数:
