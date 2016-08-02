@@ -10,6 +10,6 @@ except ImportError:
     print 'http://code.google.com/p/tesseract-ocr/'
     raise SystemExit
 
-image = Image.open('F:/github/Tmobile/scrapy/captcha_0.26806422253139317.jpg')
-vcode = pytesseract.image_to_string(image)
+image = Image.open('captcha_0.26806422253139317.jpg')
+vcode = pytesseract.image_to_string(image, config='-psm 7')
 print vcode
